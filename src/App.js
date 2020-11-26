@@ -1,5 +1,9 @@
 import './App.css';
-import { Navbar, InputGroup, ListGroup, ListGroupItem, NavbarBrand, Nav, Input, InputGroupAddon, Button } from 'reactstrap';
+import { Navbar, ListGroup, ListGroupItem, NavbarBrand, Container } from 'reactstrap';
+import Add from "./components/AddItem";
+import List from "./components/AddItem";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
   return (
@@ -7,15 +11,10 @@ function App() {
       <Navbar color="light" light expand="md">
         <NavbarBrand href="/">Shopping Spree</NavbarBrand>
       </Navbar>
-      <InputGroup>
-        <Input />
-        <InputGroupAddon addonType="append">
-          <Button color="success"></Button>
-        </InputGroupAddon>
-      </InputGroup>
-      <ListGroup>
-        <ListGroupItem></ListGroupItem>
-      </ListGroup>
+      <Container>
+        <Add />
+        <List />
+      </Container>
     </div>
   );
 }

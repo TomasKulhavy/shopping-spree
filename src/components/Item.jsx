@@ -2,7 +2,7 @@ import {ListGroupItem} from "reactstrap";
 
 const Item = ({item}) => (
     <ListGroupItem>
-        {item.}
+        {item}
     </ListGroupItem>
 );
 
