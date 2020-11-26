@@ -1,23 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import { Navbar, InputGroup, ListGroup, ListGroupItem, NavbarBrand, Nav, Input, InputGroupAddon, Button } from 'reactstrap';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar color="light" light expand="md">
+        <NavbarBrand href="/">Shopping Spree</NavbarBrand>
+      </Navbar>
+      <InputGroup>
+        <Input />
+        <InputGroupAddon addonType="append">
+          <Button color="success"></Button>
+        </InputGroupAddon>
+      </InputGroup>
+      <ListGroup>
+        <ListGroupItem></ListGroupItem>
+      </ListGroup>
     </div>
   );
 }
