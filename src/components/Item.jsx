@@ -1,9 +1,10 @@
-import {ListGroupItem} from "reactstrap";
+import React from 'react';
+import { ListGroupItemText } from "reactstrap";
 
-const Item = ({item}) => (
-    <ListGroupItem>
-        {item}
-    </ListGroupItem>
-);
+function Item({text}) {
+    <ListGroupItemText>
+        {text}
+    </ListGroupItemText>
+}
 
 export default Item;
