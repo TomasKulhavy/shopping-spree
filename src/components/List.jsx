@@ -14,6 +14,6 @@ function List({list}) {
     <ListGroup>
       {renderList()}
     </ListGroup>
-  )
-};
+  );
+}
 export default List;

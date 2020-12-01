@@ -9,5 +9,5 @@ function AddItem({list, setList}) {
             <Button onClick={() => setList([...list, value])} color="success">Add</Button>
         </Form>
     );
-};
+}
 export default AddItem;

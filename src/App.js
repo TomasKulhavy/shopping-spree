@@ -19,7 +19,7 @@ function App() {
         </Nav>
       </Navbar>
       <Container>
-        <AddItem setList={setList}/>
+        <AddItem list={list} setList={setList}/>
         <List list={list}/>
       </Container>
     </div>
