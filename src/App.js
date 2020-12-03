@@ -5,7 +5,6 @@ import AddItem from "./components/AddItem";
 import List from "./components/List";
 import NavigationBar from "./components/NavigationBar";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Item from './components/Item';
 
 function App() {
   const [list, setList] = useState([]);
@@ -25,8 +24,8 @@ function App() {
     <div className="App">
       <NavigationBar count={count} />
       <Container>
-        <AddItem addItem={addItem}/>
-        <List removeItem={removeItem} value={list}/>
+        <AddItem addItem={addItem} />
+        <List removeItem={removeItem} value={list} />
       </Container>
     </div>
   );
