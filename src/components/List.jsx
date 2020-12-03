@@ -1,15 +1,11 @@
 import React from 'react';
-import { ListGroup, ListGroupItemText } from "reactstrap";
+import { ListGroup } from "reactstrap";
+import Item from "./Item";
 
-function List({list}) {
-  return list.map ((item) => {
-    return (
-      <ListGroup>
-        <ListGroupItemText>
-          {item}
-        </ListGroupItemText>
-      </ListGroup>
-    );
-  });
-}
+const List = ({value, removeItem}) => (
+  <ListGroup>
+    {value.map((item, index) => (<Item index={index} item={item} removeItem={removeItem} />))}
+  </ListGroup>
+)
+
 export default List;
