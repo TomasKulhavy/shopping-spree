@@ -1,11 +1,11 @@
 import React from 'react';
-import { ListGroupItemText, Button } from "reactstrap";
+import { ListGroupItem, Button } from "reactstrap";
 
 const Item = ({item, removeItem, index}) => (
-    <ListGroupItemText>
+    <ListGroupItem>
         {item}
         <Button onClick={() => removeItem(index)} color="danger">Remove</Button>
-    </ListGroupItemText>
+    </ListGroupItem>
 )
 
 export default Item;

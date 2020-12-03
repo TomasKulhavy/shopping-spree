@@ -8,7 +8,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   const [list, setList] = useState([]);
-  
   const count = list.length;
 
   const addItem = (v) => {
