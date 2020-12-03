@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Form, Button, Input } from "reactstrap";
 
 function AddItem({list, setList}) {
-    const [value, setValue] = useState(null);
+    const [value, setValue] = useState("");
     return (
         <Form>
             <Input placeholder="Shopping item" type="text" onChange={e => setValue(e.target.value)}/>
