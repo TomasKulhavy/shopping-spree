@@ -1,26 +1,35 @@
 import './App.css';
-import React, {useState} from 'react';
-import { Navbar, Nav, NavItem, NavLink, NavbarBrand, Container } from "reactstrap";
+import React, { useState } from 'react';
+import { Container } from "reactstrap";
 import AddItem from "./components/AddItem";
 import List from "./components/List";
+import NavigationBar from "./components/NavigationBar";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   const [list, setList] = useState([]);
   const count = list.length;
+  const textColor = "";
+
+  const addItem = (v) => {
+    setList([...list, v])
+  }
+
+  const removeItem = (index) => {
+    list.splice(index, 1)
+    setList([...list])
+  }
+
+  const checkItem = (index) => {
+    textColor = "success"
+  }
+
   return (
     <div className="App">
-      <Navbar color="light" light expand="md">
-        <NavbarBrand href="/">Shopping Spree</NavbarBrand>
-        <Nav>
-          <NavItem>
-            <NavLink href="/">Items {count}</NavLink>
-          </NavItem>
-        </Nav>
-      </Navbar>
+      <NavigationBar count={count} />
       <Container>
-        <AddItem list={list} setList={setList}/>
-        <List list={list}/>
+        <AddItem addItem={addItem} />
+        <List removeItem={removeItem} checkItem={checkItem} value={list} />
       </Container>
     </div>
   );
