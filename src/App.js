@@ -9,8 +9,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
   const [list, setList] = useState([]);
   const count = list.length;
-  const textColor = "";
-
+  const [theme, setTheme] = useState("muted");
+  
   const addItem = (v) => {
     setList([...list, v])
   }
@@ -20,16 +20,12 @@ function App() {
     setList([...list])
   }
 
-  const checkItem = (index) => {
-    textColor = "success"
-  }
-
   return (
     <div className="App">
       <NavigationBar count={count} />
       <Container>
         <AddItem addItem={addItem} />
-        <List removeItem={removeItem} checkItem={checkItem} value={list} />
+        <List removeItem={removeItem} setTheme={setTheme} value={list} />
       </Container>
     </div>
   );
